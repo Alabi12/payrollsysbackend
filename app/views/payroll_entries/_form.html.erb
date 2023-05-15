@@ -1,0 +1,47 @@
+<%= form_with(model: payroll_entry) do |form| %>
+  <% if payroll_entry.errors.any? %>
+    <div style="color: red">
+      <h2><%= pluralize(payroll_entry.errors.count, "error") %> prohibited this payroll_entry from being saved:</h2>
+
+      <ul>
+        <% payroll_entry.errors.each do |error| %>
+          <li><%= error.full_message %></li>
+        <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div>
+    <%= form.label :payroll_period_id, style: "display: block" %>
+    <%= form.text_field :payroll_period_id %>
+  </div>
+
+  <div>
+    <%= form.label :employee_id, style: "display: block" %>
+    <%= form.text_field :employee_id %>
+  </div>
+
+  <div>
+    <%= form.label :salary_id, style: "display: block" %>
+    <%= form.text_field :salary_id %>
+  </div>
+
+  <div>
+    <%= form.label :hours_worked, style: "display: block" %>
+    <%= form.text_field :hours_worked %>
+  </div>
+
+  <div>
+    <%= form.label :vacation_hours, style: "display: block" %>
+    <%= form.text_field :vacation_hours %>
+  </div>
+
+  <div>
+    <%= form.label :sick_hours, style: "display: block" %>
+    <%= form.text_field :sick_hours %>
+  </div>
+
+  <div>
+    <%= form.submit %>
+  </div>
+<% end %>

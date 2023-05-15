@@ -1,0 +1,14 @@
+<p style="color: green"><%= notice %></p>
+
+<h1>Payroll periods</h1>
+
+<div id="payroll_periods">
+  <% @payroll_periods.each do |payroll_period| %>
+    <%= render payroll_period %>
+    <p>
+      <%= link_to "Show this payroll period", payroll_period %>
+    </p>
+  <% end %>
+</div>
+
+<%= link_to "New payroll period", new_payroll_period_path %>
