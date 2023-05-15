@@ -1,0 +1,17 @@
+# Read about fixtures at https://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  payroll_period: one
+  employee: one
+  salary: one
+  hours_worked: 9.99
+  vacation_hours: 9.99
+  sick_hours: 9.99
+
+two:
+  payroll_period: two
+  employee: two
+  salary: two
+  hours_worked: 9.99
+  vacation_hours: 9.99
+  sick_hours: 9.99

@@ -1,0 +1,27 @@
+<%= form_with(model: payroll_period) do |form| %>
+  <% if payroll_period.errors.any? %>
+    <div style="color: red">
+      <h2><%= pluralize(payroll_period.errors.count, "error") %> prohibited this payroll_period from being saved:</h2>
+
+      <ul>
+        <% payroll_period.errors.each do |error| %>
+          <li><%= error.full_message %></li>
+        <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div>
+    <%= form.label :start_date, style: "display: block" %>
+    <%= form.date_field :start_date %>
+  </div>
+
+  <div>
+    <%= form.label :end_date, style: "display: block" %>
+    <%= form.date_field :end_date %>
+  </div>
+
+  <div>
+    <%= form.submit %>
+  </div>
+<% end %>
